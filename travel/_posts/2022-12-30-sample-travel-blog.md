@@ -1,18 +1,17 @@
 ---
 layout:     post
-title:      Sample Blog
-subtitle:   Bubble Bubble
-date:       2023-12-30
+title:      First travel Sample Blog
+subtitle:   Travel Wide
+date:       2022-12-30
 author:     Shrijal Pradhan
 header-img: img/post-maspalomas.jpg
 catalog: true
 categories: travel
-permalink: /:categories/sample-blog/
 tags:
     - sample
 ---
 
-## Money Money
+## Travel Travel
 
 dfdfd
 

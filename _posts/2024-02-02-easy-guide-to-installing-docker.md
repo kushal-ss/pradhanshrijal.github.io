@@ -7,7 +7,7 @@ author:     Shrijal Pradhan
 header-img: "img/pha-easy-docker.png"
 color-grad: 0.75
 catalog: true
-categories: blog
+categories: travel
 permalink: /:categories/:title/
 tags:
     - pha

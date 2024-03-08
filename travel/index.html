@@ -1,11 +1,10 @@
 ---
 layout: page
-description: "Smol Steps, Big Changes."
+title: "Travels"
+description: "New Destinations"
 ---
 
-
-{% for post in paginator.posts %}
-{% if post.categories contains 'travel' %}
+{% for post in site.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
@@ -25,9 +24,8 @@ description: "Smol Steps, Big Changes."
     </p>
 </div>
 <hr>
-{% endif %}
-{% endfor %}
 
+{% endfor %}
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
