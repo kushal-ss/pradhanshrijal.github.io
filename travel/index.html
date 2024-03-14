@@ -5,6 +5,7 @@ description: "New Destinations"
 ---
 
 {% for post in site.posts %}
+{% if post.categories contains 'travel' %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
@@ -24,7 +25,7 @@ description: "New Destinations"
     </p>
 </div>
 <hr>
-
+{% endif %}
 {% endfor %}
 
 <!-- Pager -->
