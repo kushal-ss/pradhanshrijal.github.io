@@ -3,6 +3,40 @@ layout: page
 description: "Smol Steps, Big Changes."
 ---
 
+<style>
+
+/* img {
+            height: 150px;
+            width: 250px;
+            object-fit: cover;
+	        float: left;
+            border: 30px;
+            margin: 0 15px 0 0;
+        } */
+
+        .container {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  
+}
+
+img {
+  max-width: 200px;
+  max-height: 250px;
+  border: 30px;
+  object-fit: cover;
+  float: left;    
+  margin: 0 20px 0 0;
+ 
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+  float: right;
+}
+</style>
 
 {% for post in paginator.posts %}
 {% if post.categories contains 'travel' %}
@@ -16,15 +50,40 @@ description: "Smol Steps, Big Changes."
             {{ post.categories }}
         </h3>
         {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
-        </div>
+
+
+        
+            <div class="img">
+                <img src="{{- post.header-img -}}" alt="post.url">
+            </div>
+            <div class="post-content-preview">
+                {{ post.content | strip_html | truncate:400 }}
+            </div> 
+          
+
+
+        <!-- Table Method -->
+        <!-- <table>
+            <td> 
+                <img src="{{- post.header-img -}}" alt="post.url"> 
+            </td>
+            <td>
+                 <div class="post-content-preview">
+                {{ post.content | strip_html | truncate:200 }}
+                </div> 
+            </td>
+        </table> -->
+
+    
     </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
+   
 </div>
+
 <hr>
+<br>
+<p class="post-meta">
+    Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+</p>
 {% endif %}
 {% endfor %}
 
